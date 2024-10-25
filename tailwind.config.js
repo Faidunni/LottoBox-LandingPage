@@ -13,6 +13,7 @@ export default {
         "card-bg": "#F5F5F5",
         "shape-color": "##D9D9D9",
         "footer-text": "#5E5D60",
+        "promo-code": "#69A507",
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(90deg, #479024 0%, #94DB72 100%)",
