@@ -1,26 +1,17 @@
-import Donation from "./component/Donation";
-import Footer from "./component/Footer";
-import Hero from "./component/Hero";
-import HowToPlay from "./component/HowToPlay";
-import InstantPage from "./component/InstantPage";
-import MagaJackpot from "./component/MagaJackpot";
-import Nav from "./component/Nav";
-import Payment from "./component/Payment";
-import SubNav from "./component/SubNav";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import LottoPage from "./Pages/LottoPage";
+import MainPage from "./Pages/MainPage";
 
 function App() {
   return (
     <>
       <div className="overflow-hidden">
-        <Nav />
-        <SubNav />
-        <Hero />
-        <MagaJackpot />
-        <InstantPage />
-        <HowToPlay />
-        <Donation />
-        <Payment />
-        <Footer />
+        <Router>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/lottopage" element={<LottoPage />} />
+          </Routes>
+        </Router>
       </div>
     </>
   );

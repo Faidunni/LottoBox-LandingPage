@@ -4,6 +4,7 @@ import pick5 from "../assets/Images/pick5.png";
 import kenoking from "../assets/Images/kenoking.png";
 import Bingo from "../assets/Images/Bingo.png";
 import arrowImg from "../assets/Images/greaterthan.svg";
+import { Link } from "react-router-dom";
 
 const InstantGames = [
   {
@@ -12,6 +13,7 @@ const InstantGames = [
     text: "100 players today",
     button: "Play Now",
     arrowImg: <img src={arrowImg} alt="forward arrow" />,
+    link: "/lottopage",
   },
   {
     img: <img src={pick5} alt="pick 5" />,
@@ -19,6 +21,7 @@ const InstantGames = [
     text: "90 players today",
     button: "Play Now",
     arrowImg: <img src={arrowImg} alt="forward arrow" />,
+    link: "/lottopage",
   },
   {
     img: <img src={Bingo} alt="Bingo" />,
@@ -26,6 +29,7 @@ const InstantGames = [
     text: "80 players today",
     button: "Play Now",
     arrowImg: <img src={arrowImg} alt="forward arrow" />,
+    link: "/lottopage",
   },
   {
     img: <img src={kenoking} alt="kenoking" />,
@@ -33,6 +37,7 @@ const InstantGames = [
     text: "70 players today",
     button: "Play Now",
     arrowImg: <img src={arrowImg} alt="forward arrow" />,
+    link: "/lottopage",
   },
 ];
 
@@ -71,10 +76,12 @@ function InstantPage() {
                   </p>
                 </div>
 
-                <button className="bg-nav-text text-white flex items-center justify-center py-2 rounded-lg px-6 gap-2 font-DM Sans font-normal text-[24px]">
-                  {game.button}
-                  <span>{game.arrowImg}</span>
-                </button>
+                <Link to={game.link}>
+                  <button className="bg-nav-text text-white flex items-center justify-center py-2 rounded-lg px-6 gap-2 font-DM Sans font-normal text-[24px]">
+                    {game.button}
+                    <span>{game.arrowImg}</span>
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
