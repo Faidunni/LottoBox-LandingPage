@@ -6,9 +6,10 @@ import linkedIn from "../assets/icons/linkedIn.svg";
 import facebook from "../assets/icons/facebook.svg";
 import instagram from "../assets/icons/instagram.svg";
 
+// Socials array with JSX image elements
 const socials = [
   {
-    img: <img src={facebook} alt="facebook icon" />,
+    img: <img src={facebook} alt="facebook icon" />, // Remove quotes around JSX
   },
   {
     img: <img src={instagram} alt="instagram icon" />,
@@ -17,7 +18,7 @@ const socials = [
     img: <img src={tiktok} alt="tiktok icon" />,
   },
   {
-    img: <img src={linkedIn} alt="linkedIn Icon" />,
+    img: <img src={linkedIn} alt="LinkedIn icon" />,
   },
 ];
 

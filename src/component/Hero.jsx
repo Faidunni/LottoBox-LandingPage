@@ -41,7 +41,7 @@ function Hero() {
               className={
                 `text-white text-2xl font-DM Sans mt-6 border border-white rounded-full px-12 py-4 ` +
                 (activeLink === index
-                  ? "bg-white text-black"
+                  ? "bg-white !text-black"
                   : "bg-transparent")
               }
               onClick={() => setActiveLink(index)}
