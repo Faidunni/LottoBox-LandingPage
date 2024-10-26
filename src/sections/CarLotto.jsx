@@ -1,9 +1,18 @@
 import React from "react";
 import car from "../assets/Images/car.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const CarLotto = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
-    <div className="bg-background-color flex p-[48px] w-[920px]  justify-between gap-2">
+    <div
+      className="bg-background-color flex p-[48px] w-[920px]  justify-between gap-2"
+      data-aos="fade-left"
+    >
       <img src={car} alt="skyscrapper" />
 
       <div className="flex ml-4">

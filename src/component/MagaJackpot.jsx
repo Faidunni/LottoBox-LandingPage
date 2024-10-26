@@ -1,12 +1,18 @@
 import CarLotto from "../sections/CarLotto";
 import HomeLotto from "../sections/HomeLotto";
 import arrow from "../assets/icons/arrow_forward.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function MagaJackpot() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <section className="my-10">
-        <div className="flex justify-between px-[170px]  ">
+        <div className="flex justify-between px-[170px]" data-aos="fade-down">
           <h1 className="font-Poppins font-bold text-[32px] text-text-color">
             Mega Jackpots
           </h1>

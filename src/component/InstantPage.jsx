@@ -5,6 +5,9 @@ import kenoking from "../assets/Images/kenoking.png";
 import Bingo from "../assets/Images/Bingo.png";
 import arrowImg from "../assets/Images/greaterthan.svg";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const InstantGames = [
   {
@@ -42,10 +45,13 @@ const InstantGames = [
 ];
 
 function InstantPage() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <section className="mt-[120px] mb-[40px]">
-        <div className="flex justify-between px-[170px]">
+        <div className="flex justify-between px-[170px]" data-aos="fade-right">
           <h1 className="font-Poppins font-bold text-[32px] text-text-color">
             Instant Games
           </h1>
@@ -59,7 +65,10 @@ function InstantPage() {
         </div>
 
         {/* instant games card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-[170px] mt-[40px]">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-[170px] mt-[40px]"
+          data-aos="fade-down"
+        >
           {InstantGames.map((game, index) => (
             <div
               key={index}

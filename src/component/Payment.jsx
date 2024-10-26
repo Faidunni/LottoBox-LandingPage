@@ -2,6 +2,9 @@ import verve from "../assets/Images/verve.png";
 import visa from "../assets/Images/visa.png";
 import mastercard from "../assets/Images/mastercard.png";
 import paystack from "../assets/Images/paystack.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const image = [
   {
@@ -19,9 +22,16 @@ const image = [
 ];
 
 function Payment() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <section className="px-[15%] py-20">
-      <div className="flex border border-text-color px-[20%] py-10 justify-between items-center">
+      <div
+        className="flex border border-text-color px-[20%] py-10 justify-between items-center"
+        data-aos="fade-right"
+      >
         {image.map((item, index) => (
           <div key={index}>{item.img}</div>
         ))}

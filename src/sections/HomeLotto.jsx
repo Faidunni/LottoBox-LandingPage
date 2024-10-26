@@ -1,8 +1,18 @@
 import house from "../assets/Images/house.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function HomeLotto() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="bg-custom-gradient flex p-[48px] w-[920px] my-10 justify-between gap-2">
+    <div
+      className="bg-custom-gradient flex p-[48px] w-[920px] my-10 justify-between gap-2"
+      data-aos="fade-right"
+    >
       <img src={house} alt="skyscrapper" />
 
       <div className="flex ">

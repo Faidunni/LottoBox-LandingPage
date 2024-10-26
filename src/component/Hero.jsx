@@ -1,5 +1,7 @@
 import hero from "../assets/Images/hero.jpg";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { useState } from "react";
 import HomeLotto from "../sections/HomeLotto";
 const Button = [
@@ -18,6 +20,10 @@ const Button = [
 ];
 
 function Hero() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [activeLink, setActiveLink] = useState(0);
   return (
     <section
@@ -27,14 +33,20 @@ function Hero() {
       }}
     >
       <div>
-        <p className="text-white text-6xl  text-center font-Poppins mt-20">
+        <p
+          className="text-white text-6xl  text-center font-Poppins mt-20"
+          data-aos="fade-down"
+        >
           Win this ₦70 Million Naira
         </p>
-        <p className="text-white text-center font-Poppins mt-6 text-6xl">
+        <p
+          className="text-white text-center font-Poppins mt-6 text-6xl"
+          data-aos="fade-down"
+        >
           Dream Apartment
         </p>
 
-        <div className="gap-6 flex justify-center mt-20">
+        <div className="gap-6 flex justify-center mt-20" data-aos="fade-left">
           {Button.map((item, index) => (
             <button
               key={index}

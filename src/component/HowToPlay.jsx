@@ -3,6 +3,9 @@ import avatar from "../assets/icons/avatar.png";
 import cup from "../assets/icons/cup.png";
 import beenhere from "../assets/icons/beenhere.png";
 import Rectangle from "../assets/icons/Rectangle.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Register = [
   {
@@ -61,15 +64,25 @@ const Instructions = [
 ];
 
 function HowToPlay() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <section className="mt-[120px]  bg-card-bg py-20">
-        <h1 className="font-Poppins font-bold text-[32px] text-text-color px-[170px] ">
+        <h1
+          className="font-Poppins font-bold text-[32px] text-text-color px-[170px]"
+          data-aos="fade-right"
+        >
           How to Play
         </h1>
 
         {/* div */}
-        <div className="grid grid-cols-4 gap-8 px-[170px] mt-[40px]">
+        <div
+          className="grid grid-cols-4 gap-8 px-[170px] mt-[40px]"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           <div className="flex gap-8 flex-col ">
             {Instructions.map((ins, index) => (
               <div
