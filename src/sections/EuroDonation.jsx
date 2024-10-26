@@ -1,18 +1,29 @@
 import Vector from "../assets/icons/Vector.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function EuroDonation() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <section className="py-10 px-[15%]">
       {/* EuroJackpot-Information  */}
-      <p className="text-promo-code-text font-DM Sans font-[500] text-[18.75px] mb-1">
-        Useful EuroJackpot information
-      </p>
-      <p className="font-DM Sans font-[200] text-promo-code-text">
-        Explore more about the lottery in our lottery-related sections
-      </p>
+      <div data-aos="fade-right">
+        <p className="text-promo-code-text font-DM Sans font-[500] text-[18.75px] mb-1">
+          Useful EuroJackpot information
+        </p>
+        <p className="font-DM Sans font-[200] text-promo-code-text">
+          Explore more about the lottery in our lottery-related sections
+        </p>
+      </div>
       <div className="flex gap-4 mt-4">
         <div>
-          <div className="border border-shape-color rounded-sm mb-4">
+          <div
+            className="border border-shape-color rounded-sm mb-4"
+            data-aos="fade-right"
+          >
             <div className="pl-4 pr-[150px] py-4">
               <p className="font-DM Sans font-[500] text-[19.53px] text-promo-code-text mb-2">
                 Results & Prize Breakdown
@@ -28,7 +39,10 @@ function EuroDonation() {
               </div>
             </div>
           </div>
-          <div className="border border-shape-color rounded-sm">
+          <div
+            className="border border-shape-color rounded-sm"
+            data-aos="fade-right"
+          >
             <div className="pl-4 pr-[150px] py-4">
               <p className="font-DM Sans font-[500] text-[19.53px] text-promo-code-text mb-2">
                 EuroJackpot
@@ -46,7 +60,10 @@ function EuroDonation() {
           </div>
         </div>
 
-        <div className="border border-shape-color rounded-sm h-1/5">
+        <div
+          className="border border-shape-color rounded-sm h-1/5"
+          data-aos="fade-left"
+        >
           <div className="pl-4 pr-[120px] py-4">
             <p className="font-DM Sans font-[500] text-[18.91px] text-promo-code-text mb-2">
               Help & FAQ

@@ -49,7 +49,10 @@ function Hero() {
         </p>
 
         {/* Arrow buttons */}
-        <div className="relative mt-10 w-full flex justify-center items-center -bottom-[90px]">
+        <div
+          className="relative mt-10 w-full flex justify-center items-center -bottom-[90px]"
+          data-aos="fade-right"
+        >
           {/* Left Arrow */}
           <button
             onClick={handlePrevious}

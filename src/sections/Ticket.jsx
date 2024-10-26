@@ -5,6 +5,9 @@ import toggle from "../assets/icons/toggle.png";
 import settings from "../assets/icons/settings.png";
 import flash from "../assets/icons/flash.png";
 import cart from "../assets/icons/cart.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const numbers = [
   {
@@ -28,19 +31,28 @@ const numbers = [
 ];
 
 function Ticket() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="py-10 px-[15%]">
       {/* Add prome code  */}
       <div className="flex gap-6 ">
         <div className="">
-          <div className="flex gap-4 items-center align-middle mb-3">
+          <div
+            className="flex gap-4 items-center align-middle mb-3"
+            data-aos="fade-right"
+          >
             <img src={number2} alt="number-2" />
             <p className="font-DM Sans font-[500] text-[18.91px] ">
               Select the duration of your ticket
             </p>
           </div>
-          <div className="bg-white shadow-xl rounded-lg p-4">
+          <div
+            className="bg-white shadow-xl rounded-lg p-4"
+            data-aos="fade-right"
+          >
             <div className="flex justify-between mb-4">
               <p className="font-DM Sans text-[#012406] text-[15.75px] font-[500]">
                 How many weeks?
@@ -95,14 +107,20 @@ function Ticket() {
               </p>
             </div>
           </div>
-          <div className="flex gap-4 items-center align-middle mt-6 mb-3">
+          <div
+            className="flex gap-4 items-center align-middle mt-6 mb-3"
+            data-aos="fade-right"
+          >
             <img src={number3} alt="number-3" />
             <p className="font-Poppins font-[500] text-[19.22px] text-[#012406] pr-8">
               Want to boost your big wins with one of our exclusive <br />{" "}
               features?
             </p>
           </div>
-          <div className="bg-white shadow-xl rounded-lg p-4">
+          <div
+            className="bg-white shadow-xl rounded-lg p-4"
+            data-aos="fade-right"
+          >
             <div className="flex justify-between items-center">
               <div className="flex gap-3">
                 <div>
@@ -126,7 +144,10 @@ function Ticket() {
             </p>
           </div>
         </div>
-        <div className="border border-[#B2B8B4] h-[225px] px-4 py-6 rounded-sm">
+        <div
+          className="border border-[#B2B8B4] h-[225px] px-4 py-6 rounded-sm"
+          data-aos="fade-left"
+        >
           <p className="font-DM Sans font-[700] text-[14.15px] text-promo-code underline mb-5">
             Add promo code
           </p>
