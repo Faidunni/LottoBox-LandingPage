@@ -3,7 +3,10 @@ import SubNav from "../component/SubNav";
 import { CiCalendar } from "react-icons/ci";
 import { IoWalletOutline } from "react-icons/io5";
 import { TbCircleNumber1 } from "react-icons/tb";
-import NumberSelection from "../component/NumberSelection";
+import NumberSelection from "../sections/NumberSelection";
+import Ticket from "../sections/Ticket";
+import EuroDonation from "../sections/EuroDonation";
+import { Link } from "react-router-dom";
 
 const Details = [
   {
@@ -22,8 +25,11 @@ const Details = [
 
 const LottoPage = () => {
   return (
-    <section>
-      <Nav />
+    <section className="mb-[20%]">
+      <Link to="/">
+        <Nav />
+      </Link>
+
       {/* subnav header */}
       <div className="bg-[#56ae2d] pb-4 shadow-md">
         <SubNav />
@@ -43,7 +49,10 @@ const LottoPage = () => {
         </div>
       </div>
       {/* NumberSelection */}
+
       <NumberSelection />
+      <Ticket />
+      <EuroDonation />
     </section>
   );
 };

@@ -11,16 +11,18 @@ export default {
         "text-color": "#767676",
         "btn-color": "#6E2490",
         "card-bg": "#F5F5F5",
-        "shape-color": "##D9D9D9",
+        "shape-color": "#D9D9D9",
         "footer-text": "#5E5D60",
         "promo-code": "#69A507",
+        "promo-code-text": "#012406",
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(90deg, #479024 0%, #94DB72 100%)",
         "background-color": "linear-gradient(90deg, #6E2490 0%, #BA72DB 100%)",
         "hero-background":
           "linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url('../assets/Images/hero.jpg')",
-        "card-gradient": "linear-gradient(90deg, #F6F6F6 0%, #FCFCFC 100%);",
+        "card-gradient": "linear-gradient(90deg, #F6F6F6 0%, #FCFCFC 100%)",
+        "ticket-gradient": "linear-gradient(90deg, #A30855 0%, #5B0841 100%)",
       },
       fontFamily: {
         Poppins: ["Poppins", "sans-serif"],
