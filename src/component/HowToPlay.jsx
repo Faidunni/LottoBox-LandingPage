@@ -69,9 +69,9 @@ function HowToPlay() {
   }, []);
   return (
     <>
-      <section className="mt-[120px]  bg-card-bg py-20">
+      <section className="mt-[120px]  bg-card-bg lg:py-20 py-10">
         <h1
-          className="font-Poppins font-bold text-[32px] text-text-color px-[170px]"
+          className="font-Poppins font-bold text-[32px] text-text-color lg:px-[170px] px-4"
           data-aos="fade-right"
         >
           How to Play
@@ -79,11 +79,11 @@ function HowToPlay() {
 
         {/* div */}
         <div
-          className="grid grid-cols-4 gap-8 px-[170px] mt-[40px]"
+          className="grid lg:grid-cols-4 lg:gap-8 lg:px-[170px] lg:mt-[40px] sm:grid-cols-1 px-4 mt-[20px]"
           data-aos="fade-down"
           data-aos-delay="100"
         >
-          <div className="flex gap-8 flex-col ">
+          <div className="flex lg:gap-8 flex-col gap-4 ">
             {Instructions.map((ins, index) => (
               <div
                 key={index}
@@ -109,7 +109,7 @@ function HowToPlay() {
               </div>
             ))}
           </div>
-          <div className="flex gap-7 flex-col">
+          <div className="lg:flex gap-7 lg:flex-col hidden">
             {Register.map((reg, index) => (
               <div key={index} className="flex flex-col gap-4 items-center">
                 <div className="mb-3">{reg.img}</div>
@@ -130,7 +130,7 @@ function HowToPlay() {
               </div>
             ))}
           </div>
-          <div className="flex gap-7 flex-col">
+          <div className="lg:flex gap-7 lg:flex-col hidden">
             {Register.map((reg, index) => (
               <div key={index} className="flex flex-col gap-4 items-center">
                 <div className="mb-3">{reg.img}</div>
@@ -151,7 +151,7 @@ function HowToPlay() {
               </div>
             ))}
           </div>
-          <div className="flex gap-7 flex-col">
+          <div className="lg:flex gap-7 lg:flex-col hidden">
             {Register.map((reg, index) => (
               <div key={index} className="flex flex-col gap-4 items-center">
                 <div className="mb-3">{reg.img}</div>

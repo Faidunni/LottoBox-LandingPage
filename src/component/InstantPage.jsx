@@ -50,13 +50,16 @@ function InstantPage() {
   }, []);
   return (
     <>
-      <section className="mt-[120px] mb-[40px]">
-        <div className="flex justify-between px-[170px]" data-aos="fade-right">
-          <h1 className="font-Poppins font-bold text-[32px] text-text-color">
+      <section className="lg:mt-[120px] mb-[40px] lg:px-[170px] px-4">
+        <div
+          className="flex justify-between items-center"
+          data-aos="fade-right"
+        >
+          <h1 className="font-Poppins font-bold lg:text-[32px] sm:text-[18px] text-text-color">
             Instant Games
           </h1>
 
-          <button className="font-DM Sans font-normal text-[24px] flex items-center border border-text-color text-text-color py-2 px-6 gap-4 rounded-full">
+          <button className="font-DM Sans font-normal lg:text-[24px] flex items-center border border-text-color text-text-color py-2 px-6 gap-4 rounded-full">
             See All
             <span>
               <img src={arrow} alt="forward arrow" />
@@ -66,7 +69,7 @@ function InstantPage() {
 
         {/* instant games card */}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-[170px] mt-[40px]"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6  mt-[40px]"
           data-aos="fade-down"
         >
           {InstantGames.map((game, index) => (

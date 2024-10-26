@@ -38,11 +38,14 @@ function Hero() {
       }}
     >
       <div className="text-center mt-20">
-        <p className="text-white text-6xl font-Poppins" data-aos="fade-down">
+        <p
+          className="text-white lg:text-6xl text-2xl font-Poppins"
+          data-aos="fade-down"
+        >
           Win this ₦70 Million Naira
         </p>
         <p
-          className="text-white font-Poppins mt-6 text-6xl"
+          className="text-white font-Poppins mt-6 lg:text-6xl text-2xl"
           data-aos="fade-down"
         >
           Dream Apartment
@@ -50,13 +53,13 @@ function Hero() {
 
         {/* Arrow buttons */}
         <div
-          className="relative mt-10 w-full flex justify-center items-center -bottom-[90px]"
+          className="relative lg:mt-10 w-full flex lg:justify-center  items-center -bottom-[90px]"
           data-aos="fade-right"
         >
           {/* Left Arrow */}
           <button
             onClick={handlePrevious}
-            className="absolute -left-[12%] transform -translate-y-1/2"
+            className="absolute lg:-left-[12%] right-10 transform -translate-y-1/2"
           >
             <img src={Circlebackward} alt="Circlebackward" />
           </button>
@@ -64,7 +67,7 @@ function Hero() {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute -right-[12%] transform -translate-y-1/2"
+            className="absolute lg:-right-[12%]  transform -translate-y-1/2"
           >
             <img src={Circleforward} alt="Circleforward" />
           </button>
@@ -76,7 +79,7 @@ function Hero() {
             <button
               key={index}
               className={`text-white text-2xl font-DM Sans mt-6 border border-white rounded-full px-12 py-4 ${
-                activeLink === index ? "bg-white text-black" : "bg-transparent"
+                activeLink === index ? "bg-white !text-black" : "bg-transparent"
               }`}
               onClick={() => setActiveLink(index)}
             >
