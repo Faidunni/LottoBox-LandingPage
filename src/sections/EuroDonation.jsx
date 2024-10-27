@@ -8,7 +8,7 @@ function EuroDonation() {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <section className="py-10 px-[15%]">
+    <section className="lg:py-10 lg:px-[15%] px-4">
       {/* EuroJackpot-Information  */}
       <div data-aos="fade-right">
         <p className="text-promo-code-text font-DM Sans font-[500] text-[18.75px] mb-1">
@@ -18,7 +18,7 @@ function EuroDonation() {
           Explore more about the lottery in our lottery-related sections
         </p>
       </div>
-      <div className="flex gap-4 mt-4">
+      <div className="flex lg:flex-row flex-col gap-4 mt-4 ">
         <div>
           <div
             className="border border-shape-color rounded-sm mb-4"

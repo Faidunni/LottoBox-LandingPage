@@ -17,17 +17,20 @@ function Donation() {
         Dream Big. Do Good.
       </h1>
       <div className="flex gap-8 px-[60px] mb-10" data-aos="fade-down">
-        <div className="items-center flex flex-col text-white w-[216px] text-center">
+        <div className="lg:items-center flex flex-col text-white w-[216px] text-center">
           <img src={box} alt="warpped present" />
-          <p className="font-Poppins text-[20px] leading-[19.2px] mt-8">
+          <p className="font-Poppins lg:text-[20px] leading-[19.2px] mt-8 lg:block hidden">
             Your Donation <br /> Your Choice
           </p>
+          <p className="font-Poppins mt-8 lg:hidden block">
+            Your Donation Your Choice
+          </p>
 
-          <p className="font-DM Sans leading-[19.2px] px-2 mt-3">
+          <p className="font-DM Sans lg:leading-[19.2px] px-2 mt-3 lg:text-[16px] text-2xl leading-[30px]">
             Win a lottery and donate to one of our charity partners
           </p>
         </div>
-        <div className="flex gap-8">
+        <div className="lg:flex gap-8  hidden">
           <img src={circle} alt="circle" />
           <img src={circle} alt="circle" />
           <img src={circle} alt="circle" />

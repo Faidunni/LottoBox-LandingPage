@@ -10,18 +10,18 @@ function NumberSelection() {
   }, []);
   return (
     <>
-      <section className="bg-custom-gradient py-10 px-[15%]">
+      <section className="bg-custom-gradient py-10 lg:px-[15%] px-4">
         <div>
           <p className="font-DM Sans text-white" data-aos="fade-left">
             Drawn today: 2h 47m
           </p>
           <p
-            className="font-DM Sans font-normal text-white text-[20.81px] my-4 ml-4"
+            className="font-DM Sans font-normal text-white text-[20.81px] my-4 lg:ml-4 ml-0"
             data-aos="fade-left"
           >
             Home Lotto
           </p>
-          <div className="flex justify-between mt-8 mb-6">
+          <div className="flex justify-between mt-8 mb-6 items-center">
             <button
               className="bg-white py-3 px-8 rounded-full font-DM Sans font-[200]"
               data-aos="fade-left"

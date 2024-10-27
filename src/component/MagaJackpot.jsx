@@ -12,12 +12,14 @@ function MagaJackpot() {
   return (
     <>
       <section className="my-10">
-        <div className="flex justify-between px-[170px]" data-aos="fade-down">
-          <h1 className="font-Poppins font-bold text-[32px] text-text-color">
+        <div
+          className="flex justify-between lg:px-[170px] px-4 items-center"
+          data-aos="fade-down"
+        >
+          <h1 className="font-Poppins font-bold lg:text-[32px] text-[18px] text-text-color">
             Mega Jackpots
           </h1>
-
-          <button className="font-DM Sans font-normal text-[24px] flex items-center border border-text-color text-text-color py-2 px-6 gap-4 rounded-full">
+          <button className="font-DM Sans font-normal lg:text-[24px] flex items-center border border-text-color text-text-color py-2 px-6 gap-4 rounded-full">
             See All
             <span>
               <img src={arrow} alt="forward arrow" />

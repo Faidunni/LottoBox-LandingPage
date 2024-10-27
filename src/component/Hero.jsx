@@ -89,7 +89,9 @@ function Hero() {
         </div>
 
         {/* Home lotto card */}
-        <HomeLotto />
+        <div>
+          <HomeLotto className="sm:w-[20px]" />
+        </div>
       </div>
     </section>
   );

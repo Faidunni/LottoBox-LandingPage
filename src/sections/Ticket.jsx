@@ -36,16 +36,16 @@ function Ticket() {
   }, []);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className="py-10 px-[15%]">
+    <section className="py-10 lg:px-[15%] px-4">
       {/* Add prome code  */}
-      <div className="flex gap-6 ">
+      <div className="flex lg:flex-row gap-6 flex-col">
         <div className="">
           <div
             className="flex gap-4 items-center align-middle mb-3"
             data-aos="fade-right"
           >
             <img src={number2} alt="number-2" />
-            <p className="font-DM Sans font-[500] text-[18.91px] ">
+            <p className="font-DM Sans font-[500] lg:text-[18.91px] ">
               Select the duration of your ticket
             </p>
           </div>
@@ -69,7 +69,7 @@ function Ticket() {
                     activeIndex === index
                       ? "bg-yellow-400"
                       : "bg-transparent border border-[#D9D9D9]"
-                  } font-DM Sans font-[500] text-[15.75px] px-9 py-2 cursor-pointer`}
+                  } font-DM Sans font-[500] lg:text-[15.75px] lg:px-9 px-4 py-2 cursor-pointer`}
                   onClick={() => setActiveIndex(index)}
                 >
                   {num.number}
@@ -112,9 +112,12 @@ function Ticket() {
             data-aos="fade-right"
           >
             <img src={number3} alt="number-3" />
-            <p className="font-Poppins font-[500] text-[19.22px] text-[#012406] pr-8">
+            <p className="font-Poppins font-[500] lg:text-[19.22px] text-[#012406] pr-8 hidden lg:block">
               Want to boost your big wins with one of our exclusive <br />{" "}
               features?
+            </p>
+            <p className="font-Poppins font-[500] lg:text-[19.22px] text-[#012406] lg:hidden block">
+              Want to boost your big wins with one of our exclusive features?
             </p>
           </div>
           <div
@@ -145,7 +148,7 @@ function Ticket() {
           </div>
         </div>
         <div
-          className="border border-[#B2B8B4] h-[225px] px-4 py-6 rounded-sm"
+          className="border border-[#B2B8B4] h-[225px] px-4 py-6 rounded-sm lg:shadow-0 shadow-xl"
           data-aos="fade-left"
         >
           <p className="font-DM Sans font-[700] text-[14.15px] text-promo-code underline mb-5">

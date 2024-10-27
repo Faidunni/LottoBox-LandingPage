@@ -50,7 +50,7 @@ function InstantPage() {
   }, []);
   return (
     <>
-      <section className="lg:mt-[120px] mb-[40px] lg:px-[170px] px-4">
+      <section className="lg:mt-[120px] lg:mb-[40px] lg:px-[170px] px-4 mb-0">
         <div
           className="flex justify-between items-center"
           data-aos="fade-right"
@@ -69,7 +69,7 @@ function InstantPage() {
 
         {/* instant games card */}
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6  mt-[40px]"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-[40px]"
           data-aos="fade-down"
         >
           {InstantGames.map((game, index) => (
@@ -78,7 +78,7 @@ function InstantPage() {
               className="bg-card-gradient border-2 border-shape-color flex flex-col gap-4"
             >
               {game.img}
-              <div className="flex justify-between px-8 pt-4 pb-8">
+              <div className="flex justify-between lg:px-8 lg:pt-4 lg:pb-8 p-2">
                 <div>
                   <p className=" font-DM Sans text-[14px] font-normal">
                     {game.title}
@@ -89,7 +89,7 @@ function InstantPage() {
                 </div>
 
                 <Link to={game.link}>
-                  <button className="bg-nav-text text-white flex items-center justify-center py-2 rounded-lg px-6 gap-2 font-DM Sans font-normal text-[24px]">
+                  <button className="bg-nav-text text-white flex items-center justify-center py-2 rounded-lg lg:px-6 px-2 lg:gap-2 gap-1 font-DM Sans font-normal lg:text-[24px]">
                     {game.button}
                     <span>{game.arrowImg}</span>
                   </button>
